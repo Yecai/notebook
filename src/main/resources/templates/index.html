@@ -5,7 +5,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p>Hello, notebook</p>
+    <div th:replace="layout/nav :: nav"></div>
+    
+    <div class="container-fluid">
+      <div class="row">
+    		<div th:replace="layout/sidebar :: sidebar"></div>
+        
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1>my first note</h1>
+		  <p>note content example</p>
+
+        </div>
+      </div>
+    </div>
     
     <div th:replace="layout/footer :: footer"></div>
 </body>

@@ -1,0 +1,10 @@
+body {
+  padding-top: 50px;
+}
+.navbar-fixed-top {
+  border: 0;
+}
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+	color: #9d9d9d;
+	cursor: default;
+}
