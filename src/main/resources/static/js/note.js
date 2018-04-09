@@ -1,3 +1,7 @@
+(function(){
+	alert(1123);
+})();
+
 $(document).ready(function(){
 	$("#addNote").bind("click", addNote);
 	
