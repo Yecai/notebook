@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.xiaopan.notebook.modal.Note;
+import com.xiaopan.notebook.domain.Note;
 import com.xiaopan.notebook.repository.NoteRepository;
 import com.xiaopan.notebook.service.NoteService;
 
