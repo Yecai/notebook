@@ -23,7 +23,9 @@ var loadSidebarTree = function() {
 				}
 			},
 			edit: {
-				enable: true
+				enable: true,
+				showRemoveBtn: zTreeShowRemoveBtn,
+				showRenameBtn: zTreeShowRenameBtn
 			},
 			callback: {
 				onClick : zTreeOnClick,
@@ -39,6 +41,12 @@ var loadSidebarTree = function() {
 		}
 	}, function(){});
 }
+function zTreeShowRemoveBtn(treeId, treeNode) {
+	return treeNode.id != 0;
+}
+function zTreeShowRenameBtn(treeId, treeNode) {
+	return treeNode.id != 0;
+}
 var newCount = 1;
 function zTreeAddHoverDom(treeId, treeNode) {
 	var sObj = $("#" + treeNode.tId + "_span");
@@ -49,7 +57,8 @@ function zTreeAddHoverDom(treeId, treeNode) {
 	var btn = $("#addBtn_"+treeNode.tId);
 	if (btn) btn.bind("click", function(){
 		var zTree = $.fn.zTree.getZTreeObj("treeDemo");
-		zTree.addNodes(treeNode, {id:(100 + newCount), pId:treeNode.id, name:"new note" + (newCount++)});
+		var newNode = {id:(100 + newCount), pId:treeNode.id, name:"new note" + (newCount++)}
+		zTree.addNodes(treeNode, newNode);
 		return false;
 	});
 };

@@ -27,14 +27,14 @@ public class TitleServiceImpl implements TitleService {
 			titles.add(map);
 		});
 		
-		Map<String, Object> root = new TreeNodeBuilder().id(0L).pId(-1L).name("notebook").open(true).buildMap();
+		Map<String, Object> root = new TreeNodeBuilder().id(0L).pId(-1L).name("notebook").open(true).drag(false).buildMap();
 		titles.add(root);
 		return titles;
 	}
 
 	@Override
 	public Title queryById(Long titleId) {
-		return titleRepository.findById(titleId).get();
+		return titleRepository.findById(titleId).orElse(null);
 	}
 
 }
