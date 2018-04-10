@@ -1,4 +1,4 @@
-package com.xiaopan.notebook.domain;
+package com.xiaopan.notebook.common;
 
 public class AjaxResponse {
 	private int code;

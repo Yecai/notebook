@@ -11,7 +11,7 @@ public class Content {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private Long titleId;
-	private String content;
+	private String contents;
 	public Long getId() {
 		return id;
 	}
@@ -24,15 +24,15 @@ public class Content {
 	public void setTitleId(Long titleId) {
 		this.titleId = titleId;
 	}
-	public String getContent() {
-		return content;
+	public String getContents() {
+		return contents;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setContents(String contents) {
+		this.contents = contents;
 	}
 	@Override
 	public String toString() {
-		return "Content [id=" + id + ", titleId=" + titleId + ", content=" + content + "]";
+		return "Content [id=" + id + ", titleId=" + titleId + ", contents=" + contents + "]";
 	}
 	
 }
